@@ -12,8 +12,12 @@ Version: 1.0
 
 .content {
 	padding : 20px;
-	width: 400px;
 	margin: auto;
+}
+
+.search_container {
+	margin-bottom: 20px;
+	max-width: 400px;
 }
 
 .track_search {
@@ -24,6 +28,10 @@ Version: 1.0
 	text-align: center;
 	padding: 5px;
 	width: 388px;
+}
+
+.track_search:focus { 
+    outline-color: #000;
 }
 
 .track_search_message, .track_search_loading_image {

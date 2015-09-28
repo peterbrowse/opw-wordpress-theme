@@ -23,7 +23,7 @@
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/pxloader-all.min.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/soundmanager2-jsmin.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/soundmanager2-nodebug-jsmin.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.motio.min.js"></script>
 	<?php if( is_home() ) { ?>
 	<script>

@@ -12,7 +12,9 @@
     	this.frame_height 			= this.settings.frame_height;
     	this.frame_width			= this.settings.frame_width;
     	this.loop_id				= this.img.id;
-    	this.loop_fs				= this.img.name;
+    	this.loop_fps				= this.img.name;
+    	this.loop_tempo				= this.img.alt;
+    	this.loop_frames			= this.img.lang;
     	this.loop_container_class	= this.settings.loop_container_class;
         
         this.init();
@@ -39,10 +41,20 @@
 	    	container.height(klass.frame_height + 'px');
 	    	container.width(klass.frame_width + 'px' );
 	    	container.css('background-image', 'url(' + klass.img.src + ')');
-	    	container.show();
+	    	container.css('display','inline-block');
+	    	container.data('fps', klass.loop_fps);
+	    	container.data('tempo', klass.loop_tempo);
     	},
     	attachAnimator: function() {
-	    	
+	    	var klass = this;
+	    	var container = $('#' + klass.loop_id);
+	    	container.motio({
+		    	startPaused: 1,
+		    	width: klass.frame_width,
+		    	height: klass.frame_height,
+		    	frames: klass.loop_frames,
+		    	fps: 24
+	    	});
     	}
     };
     
